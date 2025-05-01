@@ -1,0 +1,213 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Tajawal', sans-serif;
+}
+
+body {
+    background: #f8fbfd;
+    line-height: 1.6;
+}
+
+.header {
+    background: linear-gradient(135deg, #008080, #006666);
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.header h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+
+.container {
+    max-width: 1300px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.models-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem 0; 
+}
+
+.model-card {
+    background: white;
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0,128,128,0.2);
+    transition: transform 0.3s;
+    position: relative;
+    text-align: center;
+    width: calc(100% - 2rem); 
+    max-width: 340px;
+    min-width: 260px;
+    flex: 1 1 calc(33.333% - 2rem);
+}
+
+.model-card:hover {
+    transform: translateY(-5px);
+}
+
+.model-badge {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    background: #ffa500;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.model-card h3 {
+    margin-top: 1rem;
+    font-size: 1.4rem;
+    color: #008080;
+}
+
+.model-details {
+    margin: 1rem 0;
+    color: #445;
+}
+
+.model-details p {
+    margin: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.view-btn {
+    padding: 0.8rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1rem;
+    background: #008080;
+    color: white;
+    transition: transform 0.2s;
+}
+
+.view-btn:hover {
+    background: #006666;
+}
+
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 1.8rem;
+    }
+
+    .models-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .model-card {
+        padding: 1rem;
+    }
+}
+
+.icon {
+    font-size: 1.2rem;
+    vertical-align: middle;
+}
+
+.year-badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: #009688;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.version-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-top: 1.5rem;
+}
+
+.version-btn {
+    padding: 0.8rem;
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.3s ease;
+    display: block;
+    position: relative;
+}
+
+.version-btn:hover {
+    transform: translateY(-2px);
+}
+
+.unsolved-btn {
+    background: #008080;
+    color: white;
+    border: 2px solid #006666;
+}
+
+.solved-btn {
+    background: #4CAF50;
+    color: white;
+    border: 2px solid #388E3C;
+}
+
+.version-btn.disabled {
+    background: #cccccc;
+    color: #666666;
+    cursor: not-allowed;
+    border: 2px solid #999999;
+}
+
+.file-size {
+    display: block;
+    font-size: 0.8rem;
+    opacity: 0.9;
+    margin-top: 0.3rem;
+}
+
+.model-card {
+    padding: 2rem 1.5rem;
+    min-height: 220px;
+}
+
+.model-card h3 {
+    margin: 1rem 0;
+    font-size: 1.6rem;
+}
+
+@media (max-width: 768px) {
+    .version-buttons {
+        flex-direction: column;
+    }
+    
+    .model-card {
+        padding: 1.5rem 1rem;
+    }
+}
+
+
+.important-notes {
+    background: #fff9e6;
+    border-left: 4px solid #ffa500;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 2rem 0;
+    color: #664d00;
+}
