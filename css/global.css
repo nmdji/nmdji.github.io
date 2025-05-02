@@ -211,3 +211,9 @@ body {
     margin: 2rem 0;
     color: #664d00;
 }
+
+.ad {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
