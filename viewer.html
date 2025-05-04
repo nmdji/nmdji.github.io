@@ -45,12 +45,12 @@
                 </strong>
             </ul>
         </div>
-        <h1 id="headerText" style="margin-bottom:1rem; color:#006666; text-align:center;">نموذج مادة الرياضيات للصف الثالث متوسط</h1>
+        <h1 id="headerText" style="margin-bottom:1rem; color:#006666; text-align:center;"></h1>
         <div style="display: flex; justify-content: center;">
             <iframe src="/pdfjs/web/viewer.html" id="pdf" frameborder="0" style="width: 100%;"></iframe>
         </div>
         <div style="display: flex; justify-content: center;">
-        <a download id="download-btn" class="download-btn down" aria-label="تحميل النموذج" style="margin-top: 30px; margin-bottom: 50px;">
+        <a download id="download-btn" class="download-btn" aria-label="تحميل النموذج">
             <svg viewBox="0 0 120 140" xmlns="http://www.w3.org/2000/svg">
 
                 <path d="M2,0 H82 L118,36 V138 H2 Z M82,0 V36 H118" fill="#fff"/>
@@ -80,7 +80,7 @@
 
         const iframe = document.getElementById("pdf");
 
-        iframe.src = `${window.location.origin}/pdfjs/web/viewer.html?file=${file}`;
+        iframe.src = `${window.location.origin}/pdfjs/web/viewer.html?file=${file}#zoom=page-width`;
 
         const downloadBtn = document.getElementById("download-btn");
 
