@@ -357,8 +357,9 @@ body.error-404 {
     margin: auto;
     overflow-x: hidden;
     overflow-y: auto;
-    transform: scale(0.9);
-    transform-origin: 0 0;
+    transform-origin: center center;
+    display: block;
+    margin: 0 auto;
 }
 
 @media (max-width: 768px){

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>نماذجي - اختيار الصف الدراسي</title>
+    <title>نماذجي</title>
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/global.css">
     <!-- Google tag (gtag.js) -->
@@ -47,7 +47,7 @@
         </div>
         <h1 id="headerText" style="margin-bottom:1rem; color:#006666; text-align:center;"></h1>
         <div style="display: flex; justify-content: center;">
-            <iframe src="/pdfjs/web/viewer.html" id="pdf" frameborder="0" style="width: 100%;"></iframe>
+            <iframe src="/pdfjs/web/viewer.html" id="pdf" frameborder="0" style="width: 80%;"></iframe>
         </div>
         <div style="display: flex; justify-content: center;">
         <a download id="download-btn" class="download-btn" aria-label="تحميل النموذج">
@@ -87,9 +87,11 @@
         downloadBtn.href = file;
 
         const height = (window.innerHeight * 0.72);
-
-        
-        iframe.style.height = (height + "px");
+        const width = (window.innerWidth)
+        iframe.style.height = height + "px";
+        iframe.style.width = width + "px";
+        iframe.style.maxWidth = "900px";
+        iframe.style.display = "block";
     </script>
 </body>
 </html>
