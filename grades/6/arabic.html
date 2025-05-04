@@ -64,11 +64,11 @@
                 <div class="model-badge">نموذج 1</div>
                 <div class="year-badge">1445هـ</div>
                 <div class="version-buttons">
-                    <a href="/uploads/G6/T3/arabic/G3_T3_Arabic_01_Unsolved.pdf" class="version-btn unsolved-btn">
+                    <a data-file="/uploads/G6/T3/arabic/G3_T3_Arabic_01_Unsolved.pdf" data-grade="السادس ابتدائي" data-subject="اللغة العربية" class="viewer-btn version-btn unsolved-btn">
                         نسخة غير محلولة
                         <span class="file-size">(حجم الملف: 0.29MB)</span>
                     </a>
-                    <a href="/uploads/G6/T3/arabic/G3_T3_Arabic_01_Unsolved.pdf" class="version-btn solved-btn">
+                    <a data-file="/uploads/G6/T3/arabic/G3_T3_Arabic_01_Unsolved.pdf" data-grade="السادس ابتدائي" data-subject="اللغة العربية" class="viewer-btn version-btn solved-btn">
                         نسخة محلولة
                         <span class="file-size">(حجم الملف: 0.34MB)</span>
                     </a>
@@ -81,7 +81,7 @@
                     <a class="version-btn disabled">
                         النسخة غير المحلولة غير متوفرة
                     </a>
-                    <a href="/uploads/G6/T3/arabic/G3_T3_Arabic_02_Solved.pdf" class="version-btn unsolved-btn">
+                    <a data-file="/uploads/G6/T3/arabic/G3_T3_Arabic_02_Solved.pdf" data-grade="السادس ابتدائي" data-subject="اللغة العربية" class="viewer-btn version-btn unsolved-btn">
                         النسخة المحلولة
                         <span class="file-size">(حجم الملف: 1.47MB)</span>
                     </a>
@@ -100,6 +100,21 @@
             </script>
             <script type="text/javascript" src="//www.highperformanceformat.com/712bb07034d8a1d95e3c2f83325010f4/invoke.js"></script>
         </div>
+        <script>
+            document.querySelectorAll(".viewer-btn").forEach(btn => {
+                btn.addEventListener("click", function(e) {
+                    e.preventDefault()
+
+                    const file = (window.location.origin + this.dataset.file);
+                    const grade = this.dataset.grade;
+                    const subject = this.dataset.subject;
+
+                    const url = `${window.location.origin}/viewer.html?file=${encodeURIComponent(file)}&grade=${encodeURIComponent(grade)}&subject=${encodeURIComponent(subject)}`;
+
+                    window.location.href = url;
+                });
+            });
+        </script>
     </div>
 </body>
 </html>

@@ -323,3 +323,40 @@ body.error-404 {
     margin-right: 8px;
     fill: white;
 }
+
+.download-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #D32F2F;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 4px;
+    text-decoration: none;
+    width: 100%;
+  }
+.download-btn svg {
+    padding-left: 5px;
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+}
+
+#pdf, .download-btn {
+    max-width: 600px;
+}
+
+#pdf {
+    width: 100%;
+    max-width: 900px;
+    height: 75vh;
+    border: none;
+    display: block;
+    margin: auto;
+}
+
+@media (max-width: 768px){
+    #pdf {
+        height: 65vh;
+    }
+}
